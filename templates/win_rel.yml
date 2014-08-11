@@ -1,0 +1,71 @@
+--- 
+name: win_rel
+director_uuid: 3b4d5244-961a-47f0-84f3-f3e3eac04e07
+release: 
+  name: win_release
+  version: 0.1-dev
+networks: 
+- name: default
+  type: manual
+  subnets: 
+  - reserved: 
+    - 10.134.134.2 - 10.134.134.159
+    static: 
+    - 10.134.134.160 - 10.134.134.169
+    range: 10.134.0.0/16
+    gateway: 10.134.0.1
+    dns: 
+    - 10.0.0.10
+    - 8.8.8.8
+    cloud_properties: 
+      name: VM Network
+resource_pools: 
+- name: windowspool
+  stemcell: 
+    name: windows2012
+    version: 1.0.3.a.a
+  network: default
+  size: 1
+  cloud_properties: 
+    ram: 600
+    cpu: 1
+    disk: 10192
+
+compilation: 
+  workers: 1
+  network: default
+  reuse_compilation_vms: true
+  cloud_properties: 
+    ram: 600
+    disk: 7000
+    cpu: 2
+
+update: 
+  canaries: 1
+  canary_watch_time: 60000
+  update_watch_time: 60000
+  max_in_flight: 1
+  max_errors: 1
+
+jobs: 
+- name: winProcessRunner
+  template: winProcessRunner
+  instances: 1
+  resource_pool: windowspool
+  networks: 
+  - name: default
+    default: 
+    - dns
+    - gateway
+    static_ips: 
+    - 10.134.134.161
+
+properties: 
+
+  networks: 
+    apps: default
+    management: default
+
+  winProcessRunner:
+    {}
+

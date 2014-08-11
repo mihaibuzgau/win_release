@@ -1,0 +1,6 @@
+<Job>
+  <Service Name="runsvc">
+    <PreStart>C:\vcap\jobs\winProcessRunner\install.bat</PreStart>
+    <PreStop></PreStop>
+  </Service>
+</Job>

@@ -1,0 +1,20 @@
+---
+packages:
+- name: processRunner
+  version: 0.1-dev
+  sha1: !binary |-
+    Njc0ZTI3ZDYxNGJhN2VmN2Q0Y2I2MTNjYTgzNmUxNjkzMDRjYTNiYw==
+  fingerprint: !binary |-
+    MmRhMDMxZjM1YWUzMWQzOTczY2I1YjgwNzdhMjFhMDI0ODE5NzA1ZQ==
+  dependencies: []
+jobs:
+- name: winProcessRunner
+  version: 0.1-dev
+  fingerprint: !binary |-
+    ZjA5MTJhZjQzNDQ4MTU1MmFkNDNlNTg3MDgwMTJkZDljOTIzYzMwYQ==
+  sha1: !binary |-
+    YWFiZmVkYWEwNjJlZTUzMjI1MzUxMzhkZDc5OWIwMThmYWUxNGJiOQ==
+commit_hash: '00000000'
+uncommitted_changes: false
+name: win_rel
+version: 0.1-dev

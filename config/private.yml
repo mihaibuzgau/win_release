@@ -1,0 +1,6 @@
+blobstore:
+ simple:
+  user: admin
+  password: admin
+ local:
+  {}

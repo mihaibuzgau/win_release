@@ -1,0 +1,3 @@
+echo compileing > %BOSH_COMPILE_TARGET%\hubba
+echo compiled > %BOSH_INSTALL_TARGET%\hubba
+xcopy "processRunner" "%BOSH_INSTALL_TARGET%" /O /X /E /H /K /I /J /Y

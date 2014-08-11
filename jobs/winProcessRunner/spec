@@ -1,0 +1,8 @@
+---
+name: winProcessRunner
+
+templates:
+  install.bat.erb: install.bat
+
+packages:
+ - processRunner
